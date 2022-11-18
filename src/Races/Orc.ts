@@ -13,7 +13,6 @@ export default class Orc extends Race {
   }
 
   static createdRacesInstances(): number {
-    // course: o this no contexto de um método estático se refere à classe
     return this._count;
   }
 
