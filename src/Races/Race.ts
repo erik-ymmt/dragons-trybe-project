@@ -1,19 +1,17 @@
 export default abstract class Race {
-  constructor(
-    private _name: string,
-    private _dexterity: number,
-  ) {
-
-  }
+  constructor(private _name: string, private _dexterity: number) {}
 
   static createdRacesInstances(): number {
-    // Esse número corresponde à quantidade de instâncias criadas a partir das classes estendidas da classe Race
-    throw new Error('Not implemented');
+    throw new Error("Not implemented");
   }
 
-  abstract maxLifePoints(): number;
+  abstract get maxLifePoints(): number;
 
-  get name() { return this._name; }
+  get name(): string {
+    return this._name;
+  }
 
-  get dexterity() { return this._dexterity; }
+  get dexterity(): number {
+    return this._dexterity;
+  }
 }
