@@ -18,7 +18,7 @@ export default class Monster implements SimpleFighter {
       this._lifePoints -= damage;
     }
     if (this._lifePoints <= 0) {
-      return -1;
+      this._lifePoints = -1;
     }
     return this.lifePoints;
   }
